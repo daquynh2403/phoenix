@@ -1,10 +1,17 @@
+import Footer from "./components/Footer"
+import Header from "./components/Header"
+import Introduce from "./components/Introduce"
+import ProjectShowcase from "./components/ProjectShowcase"
 
 function App() {
 
   return (
-    <div className="text-3xl font-bold underline text-red-400">
-      Hello World
-    </div>
+    <>
+      <Header />
+      <Introduce />
+      <ProjectShowcase />
+      <Footer />
+    </>
   )
 }
 
