@@ -1,7 +1,8 @@
 import logo from "../assets/introduce.jpg"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faLocationDot } from '@fortawesome/free-solid-svg-icons'
-import { faHtml5, faCss3Alt, faJs, faReact, faVuejs, faSass, faNodeJs } from '@fortawesome/free-brands-svg-icons'
+import { faLocationDot, faSquarePhoneFlip } from '@fortawesome/free-solid-svg-icons'
+import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
+import { faHtml5, faCss3Alt, faJs, faReact, faVuejs, faSass, faNodeJs, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
 
 function Introduce() {
   const techStackData= [
@@ -13,17 +14,33 @@ function Introduce() {
     { icon: faSass, color: '#db7b89'},
     { icon: faNodeJs, color: '#5ebe5b'}
   ]
+  const socialLinksData = [
+    { icon: faLinkedin, color: '#397aea'},
+    { icon: faGithub, color: ''},
+    { icon: faEnvelope, color: '#ea1f1f'},
+    { icon: faSquarePhoneFlip, color: ''}
+  ]
   return (
-    <div className="w-fit mx-auto flex mt-10">
+    <div className="w-fit mx-auto flex mt-16">
         <div className="mr-8">
-          <div className="text-5xl font-bold">Frontend Developer</div>
-          <div className="flex my-4 font-semibold">
-              <FontAwesomeIcon icon={faLocationDot} style={{color: "#641507",}} size="lg" className="mr-1" />
-              Ho Chi Minh, Vietnam 
+          <div className="text-5xl font-bold">
+            Front-End Developer
           </div>
-          <div className="w-96 text-lg text-slate-500">I am a highly motivated and dedicated Frontend developer with a Bachelor Degree in Computer Science and 2 years of professional experience. Known for my attention to detail, creativity, and problem-solving abilities, I strive to create visually stunning and user-friendly web applications.</div>
-          <div className="flex gap-4 items-center font-bold mt-20">
-            <span>Tech stack</span>
+          <div className="text-lg text-slate-500 my-16">
+            <span>Hi, I am Quynh Le. A passionate Front-end Developer based in </span>
+            <span className="font-semibold text-slate-600">
+                Ho Chi Minh, Vietnam 
+                <FontAwesomeIcon icon={faLocationDot} size="lg" className="ml-1" />
+            </span>
+          </div>
+          <div className="flex gap-4 items-center font-bold mt-12">
+            <span className="border-r-2 border-slate-600 pr-3 py-1">Social links</span>
+            {socialLinksData.map((item, index) => (
+              <FontAwesomeIcon key={index} icon={item.icon} style={{color: item.color}} size="2xl"/>
+            ))}
+          </div>
+          <div className="flex gap-4 items-center font-bold mt-10">
+            <span className="border-r-2 border-slate-600 pr-4 py-1">Tech stack</span>
             {techStackData.map((item, index) => (
               <FontAwesomeIcon key={index} icon={item.icon} style={{color: item.color}} size="2xl"/>
             ))}
