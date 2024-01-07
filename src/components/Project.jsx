@@ -1,12 +1,12 @@
-import project3 from '../assets/project-3.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faReact, faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
+import { string } from 'prop-types';
 
-function Project() {
+function Project({ imgSrc }) {
   return (
-    <div className='w-full flex border-t-2 justify-center gap-40'>
-      <div className="p-4">
+    <div className='w-full flex justify-center gap-40'>
+      <div className="p-4 hidden">
         <span className="text-5xl text-slate-700 font-thin underline">
           Lunari
         </span>
@@ -21,11 +21,15 @@ function Project() {
         <div className="font-semibold text-slate-900">An E-commerce website allows users shopping online</div>
         <FontAwesomeIcon  icon={faReact} style={{color: '#417ce1'}} size="2xl"/>
       </div>
-      <div className="overflow-hidden w-1/3" >
-        <img src={project3} alt='Project 1' className='w-full h-full transition duration-700 ease-in-out hover:opacity-85 hover:scale-125'/>
+      <div className="overflow-hidden w-full" >
+        <img src={imgSrc} alt='Project 1' className='w-full h-full transition duration-700 ease-in-out hover:opacity-85 hover:scale-125'/>
       </div>
     </div>
   )
+}
+
+Project.propTypes = {
+  imgSrc: string
 }
 
 export default Project

@@ -1,4 +1,3 @@
-import logo from "../assets/introduce.jpg"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLocationDot, faSquarePhoneFlip,  } from '@fortawesome/free-solid-svg-icons'
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
@@ -57,7 +56,7 @@ function Introduce() {
           </div>
         </div>
         <div className="w-96">
-            <img className="" src={logo} alt='Introduce image' />
+            <img className="" src="" alt='Introduce image' />
         </div>
     </div>
   )
