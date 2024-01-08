@@ -17,7 +17,9 @@ function App() {
           <FontAwesomeIcon icon={faChevronDown} className="absolute bottom-6 w-full animate-bounce" size="lg" />
         </a>
       </div>
-      <About />
+      <div id="about" className="py-28">
+        <About />
+      </div>
       <ProjectShowcase />
       <Footer />
     </>
