@@ -3,6 +3,8 @@ import project4 from '../assets/project-4.jpg'
 import project5 from '../assets/project-5.jpg'
 import project6 from '../assets/project-6.jpg'
 import project7 from '../assets/project-7.jpg'
+import project8 from '../assets/project-8.jpg'
+import project9 from '../assets/project-9.jpg'
 
 function ProjectShowcase() {
   return (
@@ -14,11 +16,15 @@ function ProjectShowcase() {
         <div className='p-2 border-2 border-slate-100 rounded font-semibold text-slate-900 hover:bg-slate-900 hover:text-slate-100 transition duration-500 ease-in-out'>Frontend Only</div>
         <div className='p-2 border-2 border-slate-100 rounded font-semibold text-slate-900 hover:bg-slate-900 hover:text-slate-100 transition duration-500 ease-in-out'>UI/UX Designer</div>
       </div>
-      <div className='grid'>
+      <div className='grid grid-cols-3'>
         <Project imgSrc={project4}/>
-        <Project imgSrc={project5}/>
-        <Project imgSrc={project6}/>
-        <Project imgSrc={project7}/>
+        <div className='grid grid-cols-2'>
+          <Project imgSrc={project5}/>
+          <Project imgSrc={project6}/>
+          <Project imgSrc={project7}/>
+          <Project imgSrc={project8}/>
+        </div>
+        <Project imgSrc={project9}/>
       </div>
       
     </div>
