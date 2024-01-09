@@ -5,7 +5,7 @@ import { string } from 'prop-types';
 
 function Project({ imgSrc }) {
   return (
-    <div className='w-full flex justify-center gap-40'>
+    <div className='w-full flex justify-center gap-40 h-96'>
       <div className="p-4 hidden">
         <span className="text-5xl text-slate-700 font-thin underline">
           Lunari
@@ -22,7 +22,7 @@ function Project({ imgSrc }) {
         <FontAwesomeIcon  icon={faReact} style={{color: '#417ce1'}} size="2xl"/>
       </div>
       <div className="overflow-hidden w-full" >
-        <img src={imgSrc} alt='Project 1' className='w-full h-full transition duration-700 ease-in-out hover:opacity-85 hover:scale-125'/>
+        <img src={imgSrc} alt='Project 1' className='w-full h-full transition duration-700 ease-in-out hover:opacity-85 hover:scale-125 object-cover'/>
       </div>
     </div>
   )

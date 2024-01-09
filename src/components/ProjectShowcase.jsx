@@ -8,19 +8,19 @@ import project9 from '../assets/project-9.jpg'
 
 function ProjectShowcase() {
   return (
-    <div className=''>
-      <div className='w-2/3 mx-auto mb-10 text-5xl font-extralight text-slate-700 tracking-wide border-l-4 border-slate-200 px-3 pb-3'>Portfolio </div>
-      <div className='grid grid-cols-3'>
+    <div className=' '>
+      <div className='text-5xl font-extralight text-slate-700 tracking-wide border-l-4 border-slate-200 p-3 ml-24 mb-10'>
+        Projects
+        <span className='font-bold ml-3'>showcase</span> 
+      </div>
+      <div className='grid grid-cols-3 gap-4'>
         <Project imgSrc={project4}/>
-        <div className='grid grid-cols-2'>
-          <Project imgSrc={project5}/>
-          <Project imgSrc={project6}/>
-          <Project imgSrc={project7}/>
-          <Project imgSrc={project8}/>
-        </div>
+        <Project imgSrc={project5}/>
+        <Project imgSrc={project6}/>
+        <Project imgSrc={project7}/>
+        <Project imgSrc={project8}/>
         <Project imgSrc={project9}/>
       </div>
-      
     </div>
     
   )
