@@ -5,7 +5,19 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      keyframes: {
+        showUp: {
+          '0%, 50%': { opacity: '0'},
+          '50%': { opacity: '0.5'},
+          '100%': { opacity: '1'},
+
+        } 
+      },
+      animation: {
+        showUp: 'showUp 3s ease-in-out 1'
+      }
+    },
   },
   plugins: [],
 }

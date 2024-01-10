@@ -8,7 +8,7 @@ import project9 from '../assets/project-9.jpg'
 
 function ProjectShowcase() {
   return (
-    <div className=' '>
+    <div className='mt-12'>
       <div className='text-5xl font-extralight text-slate-700 tracking-wide border-l-4 border-slate-200 p-3 ml-24 mb-10'>
         Projects
         <span className='font-bold ml-3'>showcase</span> 
