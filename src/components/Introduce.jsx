@@ -70,9 +70,9 @@ function Introduce() {
   
   
   return (
-    <div className="absolute flex left-1/2 top-1/4 w-full z-50" ref={contentRef}>
+    <div className="absolute flex left-1/2 top-1/4 w-full z-50" >
       {contentData.map((content, index) => (
-        <div key={index} style={{ transform: `translateX(${index * 270}%)`}}>
+        <div key={index} style={{ transform: `translateX(${index * 270}%)`}} ref={contentRef}>
           <div className="text-7xl font-extralight text-slate-700 tracking-wide contentBanner">
             {content.heading}
           </div>

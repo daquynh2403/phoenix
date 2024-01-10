@@ -1,6 +1,6 @@
 import project4 from '../assets/project-4.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faStar } from '@fortawesome/free-regular-svg-icons'
+import { faStar } from '@fortawesome/free-solid-svg-icons'
 
 function Footer() {
   return (
@@ -18,12 +18,22 @@ function Footer() {
             <label className='text-base font-extralight p-2'>Name</label>
             <input placeholder='Empty for Anonymous' className='font-thin block w-96 p-2 border-2 rounded-lg' />
           </div>
-          <div className='my-4 text-2xl'>
-            <FontAwesomeIcon icon={faStar} className='hover:text-slate-600' />
-            <FontAwesomeIcon icon={faStar} />
-            <FontAwesomeIcon icon={faStar} />
-            <FontAwesomeIcon icon={faStar} />
-            <FontAwesomeIcon icon={faStar} />
+          <div className='my-4 text-2xl text-slate-300'>
+            <button className='hover:text-yellow-400 transition-all duration-300'>
+              <FontAwesomeIcon icon={faStar}/>
+            </button>
+            <button className='hover:text-yellow-400 transition-all duration-300'>
+              <FontAwesomeIcon icon={faStar} />
+            </button>
+            <button className='hover:text-yellow-400 transition-all duration-300'>
+              <FontAwesomeIcon icon={faStar} />
+            </button>
+            <button className='hover:text-yellow-400 transition-all duration-300'>
+              <FontAwesomeIcon icon={faStar} />
+            </button>
+            <button className='hover:text-yellow-400 transition-all duration-300'>
+              <FontAwesomeIcon icon={faStar} />
+            </button>
           </div>
           <div className='mt-3'>
             <label className='text-base font-extralight p-2'>Message</label>
