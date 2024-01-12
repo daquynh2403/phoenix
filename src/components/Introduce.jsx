@@ -1,100 +1,91 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faLocationDot } from '@fortawesome/free-solid-svg-icons'
-import { useEffect, useRef, useState } from 'react'
-import { number } from 'prop-types'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
+import { useRef } from "react";
+import { number } from "prop-types";
 
 function Introduce() {
-  const contentRef = useRef(null)
-  // const [isIntersecting, setIsIntersecting] = useState(false)
-  // useEffect(() => {
-  //   const observer = new IntersectionObserver(entry => {
-  //     // const content = entry.target.querySelectorAll('.contentBanner')
-  //     setIsIntersecting(entry[0].isIntersecting)
-  //     console.log(entry[0]);
-  //   })
-  //   observer.observe(contentRef.current)
-  //   return () => observer.disconnect()
-  // },[])
-  
-  // useEffect(() => {
-  //   if (isIntersecting) {
-  //     contentRef.current.querySelectorAll('.contentBanner').forEach((el, index) => {
-  //       setTimeout(() => {
-  //         el.classList.add('animate-showUp')
-  //       }, index * 100)
-  //     })
-  //   } else {
-  //     contentRef.current.querySelectorAll('.contentBanner').forEach((el, index) => {
-  //       setTimeout(() => {
-  //         el.classList.remove('animate-showUp')
-  //       }, index * 100)
-  //     })
-  //   }
-  // },[isIntersecting])
+  const contentRef = useRef(null);
 
   const contentData = [
     {
-      heading: 'Front-End',
-      subheading: 'Developer',
+      heading: "Front-End",
+      subheading: "Developer",
       desc: {
-        partOne: 'Hi, I am ',
-        partTwo: 'Quynh Le',
-        partThree: '. A passionate Front-end Developer based in ',
-        partFour: 'Ho Chi Minh, Vietnam'
+        partOne: "Hi, I am ",
+        partTwo: "Quynh Le",
+        partThree: ". A passionate Front-end Developer based in ",
+        partFour: "Ho Chi Minh, Vietnam",
       },
-      useIcon: true
+      useIcon: true,
     },
     {
-      heading: 'WORKING',
-      subheading: 'ANYWHERE',
+      heading: "WORKING",
+      subheading: "ANYWHERE",
       desc: {
-        partOne: 'My ',
-        partTwo: 'passion ',
-        partThree: 'guide me',
-        partFour: ''
+        partOne: "My ",
+        partTwo: "passion ",
+        partThree: "guide me",
+        partFour: "",
       },
-      useIcon: false
+      useIcon: false,
     },
     {
-      heading: 'LEARNING',
-      subheading: 'EVERYWHERE',
+      heading: "LEARNING",
+      subheading: "EVERYWHERE",
       desc: {
-        partOne: '',
-        partTwo: '',
-        partThree: '',
-        partFour: ''
+        partOne: "",
+        partTwo: "",
+        partThree: "",
+        partFour: "",
       },
-      useIcon: false
-    }
-  ]
-  
-  
+      useIcon: false,
+    },
+  ];
+
   return (
-    <div className="absolute flex left-1/2 top-1/4 w-full z-50" >
+    <div className="absolute flex left-1/2 top-1/4 w-full z-50">
       {contentData.map((content, index) => (
-        <div key={index} style={{ transform: `translateX(${index * 270}%)`}} ref={contentRef}>
+        <div
+          key={index}
+          style={{ transform: `translateX(${index * 270}%)` }}
+          ref={contentRef}
+        >
           <div className="text-7xl font-extralight text-slate-700 tracking-wide contentBanner">
             {content.heading}
           </div>
           <div className="text-7xl font-bold text-slate-800 tracking-wide mt-3 contentBanner">
             {content.subheading}
           </div>
-          <div className='mt-4 h-px bg-slate-500 w-24'></div>
+          <div className="mt-4 h-px bg-slate-500 w-24"></div>
           <div className="text-2xl font-extralight text-slate-500 mt-10 leading-10 contentBanner">
-            <span>{content.desc.partOne}<span className='font-normal text-slate-700'>{content.desc.partTwo}</span>{content.desc.partThree}</span>
+            <span>
+              {content.desc.partOne}
+              <span className="font-normal text-slate-700">
+                {content.desc.partTwo}
+              </span>
+              {content.desc.partThree}
+            </span>
             <span className="font-normal text-slate-700">
-                {content.desc.partFour}
-                {content.useIcon ? <FontAwesomeIcon icon={faLocationDot} size="lg" className="ml-1" /> : <></>}
+              {content.desc.partFour}
+              {content.useIcon ? (
+                <FontAwesomeIcon
+                  icon={faLocationDot}
+                  size="lg"
+                  className="ml-1"
+                />
+              ) : (
+                <></>
+              )}
             </span>
           </div>
         </div>
       ))}
     </div>
-  )
+  );
 }
 
 Introduce.propTypes = {
-  current: number
-}
+  current: number,
+};
 
-export default Introduce
+export default Introduce;
