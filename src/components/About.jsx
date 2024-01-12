@@ -1,6 +1,9 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSquarePhoneFlip } from "@fortawesome/free-solid-svg-icons";
-import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
+import {
+  faSquarePhoneFlip,
+  faArrowUpRightFromSquare,
+} from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faCopy } from "@fortawesome/free-regular-svg-icons";
 import {
   faHtml5,
   faCss3Alt,
@@ -13,8 +16,13 @@ import {
   faPython,
 } from "@fortawesome/free-brands-svg-icons";
 import project9 from "../assets/project-9.jpg";
+import Notification from "./Notification";
+import { useState } from "react";
 
 function About() {
+  const [show, setShow] = useState(false);
+  const [clickItem, setClickItem] = useState(0);
+
   const techStackData = [
     { icon: faHtml5, color: "", name: "HTML5" },
     { icon: faCss3Alt, color: "", name: "CSS3" },
@@ -40,16 +48,33 @@ function About() {
     {
       icon: faEnvelope,
       color: "",
-      link: "daquynh2403@gmail.com",
       name: "daquynh2403@gmail.com",
+      isCopy: true,
+      idItem: "gmail",
     },
     {
       icon: faSquarePhoneFlip,
       color: "",
-      link: "+84 865781317 (Mobile)",
-      name: "+84 865 781 317 (Mobile)",
+      name: "+84 865 781 317 (Zalo)",
+      isCopy: true,
+      idItem: "phone",
     },
   ];
+  const handleClick = (id, clickItem) => {
+    const textContent = document.getElementById(id);
+    console.log(textContent.value);
+    const copyAction = navigator.clipboard.writeText(textContent.value);
+    copyAction
+      .then(() => {
+        setShow(true);
+        setClickItem(clickItem);
+
+        setTimeout(() => {
+          setShow(false);
+        }, 2000);
+      })
+      .catch((error) => console.error(error));
+  };
   return (
     <div className="flex">
       <div className="w-1/2 mx-auto">
@@ -64,24 +89,48 @@ function About() {
             problem-solving abilities, I strive to create visually stunning and
             user-friendly web applications.
           </div>
-          <div className="mt-10 grid grid-cols-2 gap-2 border-l-2 border-slate-500 pb-2 w-[40rem]">
+          <div className="mt-10 grid grid-cols-2 gap-2 border-l-2 border-slate-500 pb-2 w-[50rem]">
             {socialLinksData.map((item, index) => (
               <div key={index} className="mt-3">
                 <FontAwesomeIcon
-                  key={index}
                   icon={item.icon}
                   style={{ color: item.color }}
                   size="xl"
                   className="w-10"
                 />
-                <a
-                  href={item.link}
-                  target="_blank"
-                  className="p-1 font-light hover:bg-slate-800 hover:text-white transition-all duration-500"
-                  rel="noreferrer"
-                >
-                  {item.name}
-                </a>
+                {item.isCopy ? (
+                  <Notification
+                    show={show}
+                    text="Copied"
+                    indexItem={index}
+                    clickItem={clickItem}
+                  >
+                    <button
+                      className="p-1 font-light hover:bg-slate-800 hover:text-white transition-all duration-500"
+                      onClick={() => handleClick(item.idItem, index)}
+                      id={item.idItem}
+                      value={item.name}
+                    >
+                      {item.name}
+                      <FontAwesomeIcon icon={faCopy} className="ml-1" />
+                    </button>
+                  </Notification>
+                ) : (
+                  <>
+                    <a
+                      href={item.link}
+                      target="_blank"
+                      className="p-1 font-light hover:bg-slate-800 hover:text-white transition-all duration-500"
+                      rel="noreferrer"
+                    >
+                      {item.name}
+                      <FontAwesomeIcon
+                        icon={faArrowUpRightFromSquare}
+                        className="ml-1"
+                      />
+                    </a>
+                  </>
+                )}
               </div>
             ))}
           </div>

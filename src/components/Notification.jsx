@@ -7,7 +7,7 @@ function Notification({ children, text, show, indexItem, clickItem }) {
     <div className="relative inline-block">
       {children}
       <div
-        className="w-fit p-2 bg-slate-600 text-white text-center rounded absolute items-center h-full transition-all duration-500 ml-2"
+        className="w-fit px-2 py-3 bg-slate-800 text-white font-thin rounded absolute items-center h-full ml-2"
         style={{
           display: show && clickItem === indexItem ? "inline-flex" : "none",
         }}
