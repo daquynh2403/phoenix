@@ -9,6 +9,27 @@ function Header() {
   useEffect(() => {
     window.addEventListener('scroll', shrinkedHeader)
   },[])
+  const scrollToAbout = () => {
+    const about = document.getElementById('about')
+    if (!about) return;
+    about.scrollIntoView({
+      behavior: "smooth"
+    })
+  }
+  const scrollToPortfolio = () => {
+    const portfolio = document.getElementById('portfolio')
+    if (!portfolio) return
+    portfolio.scrollIntoView({
+      behavior: 'smooth'
+    })
+  }
+  const scrollToEducation = () => {
+    const education = document.getElementById('education')
+    if (!education) return
+    education.scrollIntoView({
+      behavior: 'smooth'
+    })
+  }
   return (
     <div className={`flex justify-between items-center px-20 fixed w-full ${headerStyle} transition-all duration-500 z-40`}>
       <div className="font-sans font-bold text-2xl">Quin.dev</div>
@@ -17,13 +38,13 @@ function Header() {
             <a href="/">Home</a>
           </li>
           <li>
-            <a href="#about">About me</a>
+            <button onClick={scrollToAbout}>About me</button>
           </li>
           <li>
-            <a href="#portfolio">Portfolio</a>
+            <button onClick={scrollToPortfolio}>Portfolio</button>
           </li>
           <li>
-            <a href="#education">Education</a>
+            <button onClick={scrollToEducation}>Education</button>
           </li>
       </ul>
     </div>

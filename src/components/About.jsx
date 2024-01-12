@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSquarePhoneFlip,  } from '@fortawesome/free-solid-svg-icons'
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
-import { faHtml5, faCss3Alt, faJs, faReact, faVuejs, faSass, faNodeJs, faGithub, faLinkedinIn, faPython } from '@fortawesome/free-brands-svg-icons'
+import { faHtml5, faCss3Alt, faJs, faReact, faVuejs, faNodeJs, faGithub, faLinkedinIn, faPython } from '@fortawesome/free-brands-svg-icons'
 import project9 from '../assets/project-9.jpg'
 
 function About() {
@@ -11,7 +11,6 @@ function About() {
     { icon: faJs, color: '', name: 'Javascript'},
     { icon: faReact, color: '', name: 'ReactJs'},
     { icon: faVuejs, color: '', name: 'VueJs'},
-    { icon: faSass, color: '', name: 'Sass'},
     { icon: faNodeJs, color: '', name: 'NodeJs'},
     { icon: faPython, color: '', name: 'Python'}
   ]
@@ -46,6 +45,12 @@ function About() {
                         <div className='text-center font-light'>{item.name}</div>
                     </div>
                 ))}
+                <div className='h-full w-full'>
+                    <svg width="90px" height="90px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" className='w-full mx-auto mb-1 fill-slate-700 hover:fill-slate-800 transition-all duration-300'>
+                        <path d="M9,13.7q1.4-5.6,7-5.6c5.6,0,6.3,4.2,9.1,4.9q2.8.7,4.9-2.1-1.4,5.6-7,5.6c-5.6,0-6.3-4.2-9.1-4.9Q11.1,10.9,9,13.7ZM2,22.1q1.4-5.6,7-5.6c5.6,0,6.3,4.2,9.1,4.9q2.8.7,4.9-2.1-1.4,5.6-7,5.6c-5.6,0-6.3-4.2-9.1-4.9Q4.1,19.3,2,22.1Z"></path>
+                    </svg>
+                    <div className='text-center font-light'>TailwindCSS</div> 
+                </div>
             </div>
         </div>
         <div className='w-2/5 flex justify-center items-center'>

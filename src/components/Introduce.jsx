@@ -5,32 +5,32 @@ import { number } from 'prop-types'
 
 function Introduce() {
   const contentRef = useRef(null)
-  const [isIntersecting, setIsIntersecting] = useState(false)
-  useEffect(() => {
-    const observer = new IntersectionObserver(entry => {
-      // const content = entry.target.querySelectorAll('.contentBanner')
-      setIsIntersecting(entry[0].isIntersecting)
-      console.log(entry[0]);
-    })
-    observer.observe(contentRef.current)
-    return () => observer.disconnect()
-  },[])
+  // const [isIntersecting, setIsIntersecting] = useState(false)
+  // useEffect(() => {
+  //   const observer = new IntersectionObserver(entry => {
+  //     // const content = entry.target.querySelectorAll('.contentBanner')
+  //     setIsIntersecting(entry[0].isIntersecting)
+  //     console.log(entry[0]);
+  //   })
+  //   observer.observe(contentRef.current)
+  //   return () => observer.disconnect()
+  // },[])
   
-  useEffect(() => {
-    if (isIntersecting) {
-      contentRef.current.querySelectorAll('.contentBanner').forEach((el, index) => {
-        setTimeout(() => {
-          el.classList.add('animate-showUp')
-        }, index * 100)
-      })
-    } else {
-      contentRef.current.querySelectorAll('.contentBanner').forEach((el, index) => {
-        setTimeout(() => {
-          el.classList.remove('animate-showUp')
-        }, index * 100)
-      })
-    }
-  },[isIntersecting])
+  // useEffect(() => {
+  //   if (isIntersecting) {
+  //     contentRef.current.querySelectorAll('.contentBanner').forEach((el, index) => {
+  //       setTimeout(() => {
+  //         el.classList.add('animate-showUp')
+  //       }, index * 100)
+  //     })
+  //   } else {
+  //     contentRef.current.querySelectorAll('.contentBanner').forEach((el, index) => {
+  //       setTimeout(() => {
+  //         el.classList.remove('animate-showUp')
+  //       }, index * 100)
+  //     })
+  //   }
+  // },[isIntersecting])
 
   const contentData = [
     {

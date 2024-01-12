@@ -15,14 +15,22 @@ import bg3 from './assets/bg-white3.jpg'
 function App() {
   const slides = [bg3, bg2, bg1]
 
+  const handleClickAbout = () => {
+    const about = document.getElementById("about")
+    if (!about) return;
+    about.scrollIntoView({
+      behavior: "smooth"
+    })
+  }
+
   return (
     <>
       <div className="overflow-hidden relative">
         <Header />
         <Carousel slides={slides} />
-        <a href="#about" className="scroll-down smooth-scroll">
-          <FontAwesomeIcon icon={faChevronDown} className="absolute w-full bottom-6 animate-bounce" size="lg" />
-        </a>
+        <button onClick={handleClickAbout}>
+          <FontAwesomeIcon icon={faChevronDown} className="absolute w-full bottom-10 animate-bounce" size="lg" />
+        </button>
       </div>
       <div id="about" className="py-20 border-b border-slate-200">
         <About />

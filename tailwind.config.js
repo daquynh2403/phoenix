@@ -18,6 +18,12 @@ export default {
         showUp: 'showUp 3s ease-in-out 1'
       }
     },
+    variants: {
+      extend: {
+        translate: ['group-hover', 'hover'],
+        zIndex: ['group-hover', 'hover'],
+      },
+    }
   },
   plugins: [],
 }

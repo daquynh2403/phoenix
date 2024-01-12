@@ -1,35 +1,44 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faReact, faGithub } from '@fortawesome/free-brands-svg-icons'
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
-import { string } from 'prop-types';
+import { array, string } from 'prop-types';
 
-function Project({ imgSrc }) {
+function Project({ imgSrc, title, repo, live, desc, techstack }) {
   return (
-    <div className='w-full flex justify-center gap-40 h-96'>
-      <div className="p-4 hidden">
-        <span className="text-5xl text-slate-700 font-thin underline">
-          Lunari
-        </span>
-        <span className="text-5xl text-slate-900 font-bold">
-          Market
-        </span>
-        <div className="flex ">S
-          <FontAwesomeIcon icon={faGithub} size='xl'/>
-          <span className='text-slate-900 text-xl mr-2 hover:underline transition duration-700 ease-in-out'>Live Demo</span>
-          <FontAwesomeIcon icon={faArrowUpRightFromSquare} size='xl'/>
+    <div className='w-full flex h-96 relative tracking-wider leading-7 overflow-hidden group '>
+      <div className="absolute bg-slate-800/60 w-1/2 h-full -translate-x-full group-hover:translate-x-0 z-50 transition-all duration-700 ease-in-out">
+        <div className='p-4'>
+          <span className="text-xl text-white font-bold ">
+            {title}
+          </span>
+          <div className="flex text-lg text-white font-thin my-4 items-center">
+            <FontAwesomeIcon icon={faGithub} className='mr-2' />
+            <a className='mr-10 cursor-pointer' href={repo}>Repository</a>
+            <FontAwesomeIcon icon={faArrowUpRightFromSquare} className='mr-2' />
+            <a className='cursor-pointer' href={live}>Live Demo</a>
+          </div>
+          <div className="text-lg font-thin text-white mb-4">{desc}</div>
+          <div className='bg-slate-900/50 rounded-full w-fit px-2 py-1 flex gap-3 text-2xl text-slate-100'>
+            {techstack.map((tech, index) => (
+              <FontAwesomeIcon key={index} icon={tech} />
+            ))}
+          </div>
         </div>
-        <div className="font-semibold text-slate-900">An E-commerce website allows users shopping online</div>
-        <FontAwesomeIcon  icon={faReact} style={{color: '#417ce1'}} size="2xl"/>
       </div>
-      <div className="overflow-hidden w-full" >
-        <img src={imgSrc} alt='Project 1' className='w-full h-full transition duration-700 ease-in-out hover:opacity-85 hover:scale-125 object-cover'/>
+      <div className="w-full" >
+        <img src={imgSrc} loading='lazy' alt='Project 1' className='w-full h-full group-hover:scale-125 object-cover transition-all duration-700 ease-in-out'/>
       </div>
     </div>
   )
 }
 
 Project.propTypes = {
-  imgSrc: string
+  imgSrc: string,
+  title: string,
+  repo: string,
+  live: string,
+  desc: string,
+  techstack: array
 }
 
 export default Project
