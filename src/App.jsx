@@ -35,7 +35,7 @@ function App() {
           />
         </button>
       </div>
-      <div id="about" className="py-20 border-b border-slate-200">
+      <div id="about" className="py-14 border-b border-slate-200">
         <About />
       </div>
       <div id="portfolio" className="py-4">

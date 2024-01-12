@@ -138,9 +138,14 @@ function About() {
         <div className="text-2xl font-extralight text-slate-700 tracking-wide border-l-2 border-slate-500 p-2 mt-10">
           Tech <span className="font-bold">stack</span>
         </div>
-        <div className="grid grid-cols-4 text-center divide-y divide-x divide-solid text-slate-600 w-[45rem] mt-4">
+        <div className="grid grid-cols-4 text-center text-slate-600 w-[45rem] mt-4">
           {techStackData.map((item, index) => (
-            <div className="py-4" key={index}>
+            <div
+              className={`py-4 ${
+                [0, 1, 2, 3].includes(index) ? "border-b" : ""
+              } ${index != 3 ? "border-r" : ""} border-slate-200`}
+              key={index}
+            >
               <FontAwesomeIcon
                 icon={item.icon}
                 style={{ color: item.color }}
@@ -150,7 +155,7 @@ function About() {
               <div className="text-center font-light">{item.name}</div>
             </div>
           ))}
-          <div className="h-full w-full">
+          <div className="h-full w-full=">
             <svg
               width="90px"
               height="90px"
@@ -165,7 +170,7 @@ function About() {
         </div>
       </div>
       <div className="w-2/5 flex justify-center items-center">
-        <img src={project9} className="w-[30rem] h-full object-cover" />
+        <img src={project9} className="w-[30rem] h-[30rem] object-cover" />
       </div>
     </div>
   );
