@@ -6,13 +6,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import Education from "./components/Education";
 import Carousel from "./components/Carousel";
-import bg1 from "./assets/bg-white1.jpg";
-import bg2 from "./assets/bg-white2.jpg";
-import bg3 from "./assets/bg-white3.jpg";
+import { slides } from "./data/carousel";
 
 function App() {
-  const slides = [bg3, bg2, bg1];
-
   const handleClickAbout = () => {
     const about = document.getElementById("about");
     if (!about) return;

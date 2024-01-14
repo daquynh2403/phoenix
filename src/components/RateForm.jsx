@@ -27,7 +27,11 @@ function RateForm() {
   };
 
   return (
-    <form className="w-1/3 mx-auto" ref={form} onSubmit={sendEmail}>
+    <form
+      className="w-1/3 mx-auto max-md:w-full max-md:mt-10"
+      ref={form}
+      onSubmit={sendEmail}
+    >
       <div className="text-lg font-semibold tracking-wider">
         RATE MY WEBSITE FOR IMPROVEMENT
       </div>
