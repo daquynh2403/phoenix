@@ -15,7 +15,7 @@ import {
   faLinkedinIn,
   faPython,
 } from "@fortawesome/free-brands-svg-icons";
-import project9 from "../assets/project-9.jpg";
+import avatar from "../assets/avatar.jpg";
 import Notification from "./Notification";
 import { useState } from "react";
 
@@ -170,7 +170,10 @@ function About() {
         </div>
       </div>
       <div className="w-2/5 flex justify-center items-center">
-        <img src={project9} className="w-[30rem] h-[30rem] object-cover" />
+        <img
+          src={avatar}
+          className="w-[30rem] h-[30rem] object-cover transition-all duration-500 shadow-md shadow-slate-400 hover:shadow-lg hover:shadow-slate-500"
+        />
       </div>
     </div>
   );

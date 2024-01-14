@@ -12,7 +12,6 @@ import bg3 from "./assets/bg-white3.jpg";
 
 function App() {
   const slides = [bg3, bg2, bg1];
-  console.log(slides);
 
   const handleClickAbout = () => {
     const about = document.getElementById("about");
