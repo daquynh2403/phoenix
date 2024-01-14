@@ -2,14 +2,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import { SERVICE_ID, TEMPLATE_ID, PUBLIC_KEY } from "../data/constant";
 
 function RateForm() {
   const [rate, setRate] = useState(0);
   const [hoverRate, setHoverRate] = useState(0);
   const form = useRef(null);
-  const SERVICE_ID = "service_4uljuhk";
-  const TEMPLATE_ID = "template_w0snlm8";
-  const PUBLIC_KEY = "C92VGDY_XkUT6t0oV";
 
   const sendEmail = (event) => {
     event.preventDefault();

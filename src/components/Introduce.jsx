@@ -2,45 +2,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import { useRef } from "react";
 import { number } from "prop-types";
+import { contentData } from "../data/introduceData";
 
 function Introduce() {
   const contentRef = useRef(null);
-
-  const contentData = [
-    {
-      heading: "Front-End",
-      subheading: "Developer",
-      desc: {
-        partOne: "Hi, I am ",
-        partTwo: "Quynh Le",
-        partThree: ". A passionate Front-end Developer based in ",
-        partFour: "Ho Chi Minh, Vietnam",
-      },
-      useIcon: true,
-    },
-    {
-      heading: "WORKING",
-      subheading: "ANYWHERE",
-      desc: {
-        partOne: "My ",
-        partTwo: "passion ",
-        partThree: "guide me",
-        partFour: "",
-      },
-      useIcon: false,
-    },
-    {
-      heading: "LEARNING",
-      subheading: "EVERYWHERE",
-      desc: {
-        partOne: "",
-        partTwo: "",
-        partThree: "",
-        partFour: "",
-      },
-      useIcon: false,
-    },
-  ];
 
   return (
     <div className="absolute flex left-1/2 top-1/4 w-full z-50">

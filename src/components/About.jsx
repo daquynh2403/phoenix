@@ -1,68 +1,17 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faSquarePhoneFlip,
-  faArrowUpRightFromSquare,
-} from "@fortawesome/free-solid-svg-icons";
-import { faEnvelope, faCopy } from "@fortawesome/free-regular-svg-icons";
-import {
-  faHtml5,
-  faCss3Alt,
-  faJs,
-  faReact,
-  faVuejs,
-  faNodeJs,
-  faGithub,
-  faLinkedinIn,
-  faPython,
-} from "@fortawesome/free-brands-svg-icons";
+import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
+import { faCopy } from "@fortawesome/free-regular-svg-icons";
 import avatar from "../assets/avatar.jpg";
 import Notification from "./Notification";
 import { useState } from "react";
+import { techStackData, socialLinksData } from "../data/aboutSectionData";
 
 function About() {
   const [show, setShow] = useState(false);
   const [clickItem, setClickItem] = useState(0);
 
-  const techStackData = [
-    { icon: faHtml5, color: "", name: "HTML5" },
-    { icon: faCss3Alt, color: "", name: "CSS3" },
-    { icon: faJs, color: "", name: "Javascript" },
-    { icon: faReact, color: "", name: "ReactJs" },
-    { icon: faVuejs, color: "", name: "VueJs" },
-    { icon: faNodeJs, color: "", name: "NodeJs" },
-    { icon: faPython, color: "", name: "Python" },
-  ];
-  const socialLinksData = [
-    {
-      icon: faLinkedinIn,
-      color: "",
-      link: "https://www.linkedin.com/in/qu%E1%BB%B3nh-l%C3%AA-b7008324a/",
-      name: "linkedin.com/quỳnh-lê",
-    },
-    {
-      icon: faGithub,
-      color: "",
-      link: "https://github.com/daquynh2403",
-      name: "github.com/daquynh2403",
-    },
-    {
-      icon: faEnvelope,
-      color: "",
-      name: "daquynh2403@gmail.com",
-      isCopy: true,
-      idItem: "gmail",
-    },
-    {
-      icon: faSquarePhoneFlip,
-      color: "",
-      name: "+84 865 781 317 (Zalo)",
-      isCopy: true,
-      idItem: "phone",
-    },
-  ];
   const handleClick = (id, clickItem) => {
     const textContent = document.getElementById(id);
-    console.log(textContent.value);
     const copyAction = navigator.clipboard.writeText(textContent.value);
     copyAction
       .then(() => {
