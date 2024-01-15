@@ -87,7 +87,7 @@ function About() {
         <div className="text-2xl font-extralight text-slate-700 tracking-wide border-l-2 border-slate-500 p-2 mt-10 max-xl:mt-4">
           Tech <span className="font-bold">stack</span>
         </div>
-        <div className="grid grid-cols-4 text-center text-slate-600 w-[45rem] mt-4 max-xl:w-full">
+        <div className="grid grid-cols-4 text-center text-slate-900/70 w-[45rem] mt-4 max-xl:w-full">
           {techStackData.map((item, index) => (
             <div
               className={`py-4 ${
@@ -99,7 +99,7 @@ function About() {
                 icon={item.icon}
                 style={{ color: item.color }}
                 size="2xl"
-                className="h-20 hover:text-slate-800 transition-all duration-300 max-md:h-10"
+                className="h-20 max-md:h-10"
               />
               <div className="text-center font-light">{item.name}</div>
             </div>
@@ -110,7 +110,7 @@ function About() {
               height="90px"
               viewBox="0 0 32 32"
               xmlns="http://www.w3.org/2000/svg"
-              className="w-full mx-auto mb-1 fill-slate-700 hover:fill-slate-800 transition-all duration-300 max-md:h-10 max-md:mt-4"
+              className="w-full mx-auto mb-1 fill-slate-900/70 max-md:h-10 max-md:mt-4"
             >
               <path d="M9,13.7q1.4-5.6,7-5.6c5.6,0,6.3,4.2,9.1,4.9q2.8.7,4.9-2.1-1.4,5.6-7,5.6c-5.6,0-6.3-4.2-9.1-4.9Q11.1,10.9,9,13.7ZM2,22.1q1.4-5.6,7-5.6c5.6,0,6.3,4.2,9.1,4.9q2.8.7,4.9-2.1-1.4,5.6-7,5.6c-5.6,0-6.3-4.2-9.1-4.9Q4.1,19.3,2,22.1Z"></path>
             </svg>

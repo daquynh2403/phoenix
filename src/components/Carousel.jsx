@@ -51,7 +51,7 @@ function Carousel({ slides }) {
                 {slide.subheading}
               </div>
               <div className="mt-4 h-px bg-slate-500 w-24 max-lg:mx-auto"></div>
-              <div className="text-2xl font-extralight text-slate-500 mt-10 leading-10 w-[60rem] max-xl:w-[30rem] max-lg:text-center max-lg:w-full max-sm:text-base">
+              <div className="text-2xl font-extralight text-slate-500 mt-10 leading-10 w-[60rem] max-xl:w-[30rem] max-lg:text-center max-lg:w-full max-sm:text-base 2xl:w-[50rem]">
                 <span>
                   {slide.desc.partOne}
                   <span className="font-normal text-slate-700">
