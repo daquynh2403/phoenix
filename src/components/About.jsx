@@ -25,20 +25,20 @@ function About() {
       .catch((error) => console.error(error));
   };
   return (
-    <div className="flex max-md:block">
-      <div className="w-1/2 mx-auto max-md:w-full max-md:ml-10">
-        <div className="text-5xl font-extralight text-slate-700 tracking-wide border-l-4 border-slate-200 px-3 pb-3">
+    <div className="flex max-xl:block">
+      <div className="w-1/2 mx-auto max-xl:w-full max-xl:text-center">
+        <div className="text-5xl font-extralight text-slate-700 tracking-wide border-l-4 border-slate-200 px-3 pb-3 max-md:text-4xl max-md:border-0 max-md:p-0">
           About <span className="font-bold">me</span>
         </div>
         <div className="mt-5 font-extralight tracking-wide">
-          <div className="break-words text-xl text-slate-900 max-md:w-[34rem]">
+          <div className="break-words text-xl text-slate-900 max-md:text-base">
             I am a highly motivated and dedicated front-end developer with a
             Bachelor Degree in Computer Science and 2 years of professional
             experience. Known for my attention to detail, creativity, and
             problem-solving abilities, I strive to create visually stunning and
             user-friendly web applications.
           </div>
-          <div className="mt-10 grid grid-cols-2 gap-2 border-l-2 border-slate-500 pb-2 w-[50rem] max-md:w-[34rem]">
+          <div className="mt-10 grid grid-cols-2 gap-2 border-l-2 border-slate-500 pb-2 w-[50rem] max-xl:w-full max-sm:grid-cols-1 max-sm:mt-2  max-md:text-sm">
             {socialLinksData.map((item, index) => (
               <div key={index} className="mt-3">
                 <FontAwesomeIcon
@@ -84,10 +84,10 @@ function About() {
             ))}
           </div>
         </div>
-        <div className="text-2xl font-extralight text-slate-700 tracking-wide border-l-2 border-slate-500 p-2 mt-10">
+        <div className="text-2xl font-extralight text-slate-700 tracking-wide border-l-2 border-slate-500 p-2 mt-10 max-xl:mt-4">
           Tech <span className="font-bold">stack</span>
         </div>
-        <div className="grid grid-cols-4 text-center text-slate-600 w-[45rem] mt-4 max-md:w-[28rem]">
+        <div className="grid grid-cols-4 text-center text-slate-600 w-[45rem] mt-4 max-xl:w-full">
           {techStackData.map((item, index) => (
             <div
               className={`py-4 ${
@@ -118,10 +118,10 @@ function About() {
           </div>
         </div>
       </div>
-      <div className="w-2/5 flex justify-center items-center max-md:w-full max-md:mt-10">
+      <div className="w-2/5 flex justify-center items-center max-xl:w-full max-xl:mt-10">
         <img
           src={avatar}
-          className="w-[30rem] h-[30rem] object-cover transition-all duration-500 shadow-md shadow-slate-400 hover:shadow-lg hover:shadow-slate-500 max-md:w-[20rem] max-md:h-[20rem]"
+          className="w-[30rem] h-[30rem] object-cover transition-all duration-500 shadow-md shadow-slate-400 hover:shadow-lg hover:shadow-slate-500 max-xl:w-[16rem] max-xl:h-[16rem] max-sm:w-[10rem] max-sm:h-[10rem]"
         />
       </div>
     </div>

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faChevronLeft,
@@ -34,25 +34,24 @@ function Carousel({ slides }) {
     };
   }, [current, slides.length]);
   return (
-    <div className="h-screen overflow-hidden">
-      <div
-        className="flex transition-all duration-700 ease-in-out relative"
-        style={{ transform: `translateX(-${current * 100}%)` }}
-      >
+    <div className="h-screen">
+      <div className="flex relative w-full h-full">
         {slides.map((slide, index) => (
-          <React.Fragment key={index}>
-            <div
-              className="absolute top-1/4 left-1/2"
-              style={{ transform: `translateX(${index * 400}%)` }}
-            >
-              <div className="text-7xl font-extralight text-slate-700 tracking-wide">
+          <div
+            key={index}
+            className="transition-all duration-700 ease-in-out flex-none w-full h-full"
+            style={{ transform: `translateX(-${current * 100}%)` }}
+          >
+            <img src={slide.img} className="w-full h-full" loading="lazy" />
+            <div className="absolute top-52 left-[64rem] max-2xl:left-1/2 max-lg:bg-slate-200/80 max-lg:left-0 max-lg:top-1/3 max-lg:w-full max-lg:text-center max-lg:py-10">
+              <div className="text-7xl font-extralight text-slate-700 tracking-wide max-lg:text-5xl">
                 {slide.heading}
               </div>
-              <div className="text-7xl font-bold text-slate-800 tracking-wide mt-3">
+              <div className="text-7xl font-bold text-slate-800 tracking-wide mt-3 max-lg:text-5xl">
                 {slide.subheading}
               </div>
-              <div className="mt-4 h-px bg-slate-500 w-24"></div>
-              <div className="text-2xl font-extralight text-slate-500 mt-10 leading-10">
+              <div className="mt-4 h-px bg-slate-500 w-24 max-lg:mx-auto"></div>
+              <div className="text-2xl font-extralight text-slate-500 mt-10 leading-10 w-[60rem] max-xl:w-[30rem] max-lg:text-center max-lg:w-full max-sm:text-base">
                 <span>
                   {slide.desc.partOne}
                   <span className="font-normal text-slate-700">
@@ -74,8 +73,7 @@ function Carousel({ slides }) {
                 </span>
               </div>
             </div>
-            <img src={slide.img} className="w-full" loading="lazy" />
-          </React.Fragment>
+          </div>
         ))}
       </div>
       <div className="flex w-full h-full justify-between text-slate-200 text-2xl absolute top-0">

@@ -3,9 +3,9 @@ import RateForm from "./RateForm";
 
 function Footer() {
   return (
-    <div className="bg-slate-100 h-fit py-10">
-      <div className="w-2/3 mx-auto flex mb-10 max-md:w-full max-md:block max-md:ml-10">
-        <div className="text-lg font-thin tracking-wide">
+    <div className="bg-slate-100 h-fit py-10 max-lg:pl-10 max-md:py-2">
+      <div className="w-2/3 mx-auto flex mb-2 max-lg:w-full max-md:block">
+        <div className="text-lg font-thin tracking-wide max-md:text-base">
           <img
             src={project4}
             className="w-28 h-28 object-cover rounded-full object-right"

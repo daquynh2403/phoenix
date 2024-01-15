@@ -28,18 +28,18 @@ function RateForm() {
 
   return (
     <form
-      className="w-1/3 mx-auto max-md:w-full max-md:mt-10"
+      className="w-1/3 mx-auto max-md:mt-10 max-md:w-full"
       ref={form}
       onSubmit={sendEmail}
     >
-      <div className="text-lg font-semibold tracking-wider">
+      <div className="text-lg font-semibold tracking-wider max-md:text-base">
         RATE MY WEBSITE FOR IMPROVEMENT
       </div>
       <div className="mt-3">
         <label className="text-base font-extralight p-2">Name</label>
         <input
           placeholder="John Doe"
-          className="font-thin block w-96 p-2 border-2 rounded-lg"
+          className="font-thin block w-full p-2 border-2 rounded-lg max-md:w-1/2"
           name="name"
           type="text"
         />
@@ -49,7 +49,7 @@ function RateForm() {
         <input
           placeholder="johndoe@gmail.com"
           type="email"
-          className="font-thin block w-96 p-2 border-2 rounded-lg"
+          className="font-thin block w-full p-2 border-2 rounded-lg max-md:w-1/2"
           name="email"
         />
       </div>
@@ -82,7 +82,7 @@ function RateForm() {
         <label className="text-base font-extralight p-2">Message</label>
         <textarea
           placeholder="Your message"
-          className="font-thin block w-96 p-2 border-2 rounded-lg"
+          className="font-thin block w-full p-2 border-2 rounded-lg max-md:w-1/2"
           name="message"
         />
       </div>

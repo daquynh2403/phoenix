@@ -1,6 +1,6 @@
 import bg1 from "../assets/bg-white1.jpg";
 import bg3 from "../assets/bg-white3.jpg";
-import bg4 from "../assets/bg-white4.jpg";
+import bg2 from "../assets/bg-white2.jpg";
 
 export const slides = [
   {
@@ -16,8 +16,8 @@ export const slides = [
     useIcon: true,
   },
   {
-    img: bg4,
-    heading: "WORKING",
+    img: bg2,
+    heading: "WORK",
     subheading: "ANYWHERE",
     desc: {
       partOne: "My ",
@@ -29,7 +29,7 @@ export const slides = [
   },
   {
     img: bg1,
-    heading: "LEARNING",
+    heading: "LEARN",
     subheading: "EVERYWHERE",
     desc: {
       partOne: "",

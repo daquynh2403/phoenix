@@ -5,11 +5,11 @@ import { array, string } from "prop-types";
 
 function Project({ imgSrc, title, repo, live, desc, techstack }) {
   return (
-    <div className="w-full flex h-96 relative tracking-wider leading-7 overflow-hidden group ">
-      <div className="absolute bg-slate-800/60 w-1/2 h-full -translate-x-full group-hover:translate-x-0 z-50 transition-all duration-700 ease-in-out max-md:w-full">
-        <div className="p-4">
-          <span className="text-xl text-white font-bold ">{title}</span>
-          <div className="inline-block text-lg text-white font-thin my-4 2xl:flex">
+    <div className="w-full flex h-96 relative tracking-wider leading-7 overflow-hidden group max-md:h-72 ">
+      <div className="absolute bg-slate-800/60 w-1/2 h-full -translate-x-full group-hover:translate-x-0 z-50 transition-all duration-700 ease-in-out max-2xl:w-full">
+        <div className="p-4 max-md:text-base">
+          <div className="text-xl text-white font-bold">{title}</div>
+          <div className="flex text-lg text-white font-thin my-4 ">
             <div className="flex items-center">
               <FontAwesomeIcon icon={faGithub} className="mr-2" />
               <a className="mr-10 cursor-pointer" href={repo}>

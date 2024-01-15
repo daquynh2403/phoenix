@@ -19,18 +19,18 @@ function App() {
 
   return (
     <>
-      <div className="overflow-hidden relative">
+      <div className="overflow-hidden">
         <Header />
         <Carousel slides={slides} />
         <button onClick={handleClickAbout}>
           <FontAwesomeIcon
             icon={faChevronDown}
-            className="absolute w-full bottom-10 animate-bounce"
+            className="absolute w-full bottom-6 animate-bounce"
             size="lg"
           />
         </button>
       </div>
-      <div id="about" className="py-14 border-b border-slate-200">
+      <div id="about" className="py-14 border-b border-slate-200 max-lg:py-4">
         <About />
       </div>
       <div id="portfolio" className="py-4">
