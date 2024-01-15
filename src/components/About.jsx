@@ -38,7 +38,7 @@ function About() {
             problem-solving abilities, I strive to create visually stunning and
             user-friendly web applications.
           </div>
-          <div className="mt-10 grid grid-cols-2 gap-2 border-l-2 border-slate-500 pb-2 w-[50rem] max-xl:w-full max-sm:grid-cols-1 max-sm:mt-2  max-md:text-sm">
+          <div className="mt-10 grid grid-cols-2 gap-2 border-l-2 border-slate-500 pb-2 w-[50rem] max-xl:w-full max-sm:grid-cols-1 max-sm:mt-2 max-md:text-sm">
             {socialLinksData.map((item, index) => (
               <div key={index} className="mt-3">
                 <FontAwesomeIcon
