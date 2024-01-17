@@ -121,7 +121,7 @@ function About() {
       <div className="w-2/5 flex justify-center items-center max-xl:w-full max-xl:mt-10">
         <img
           src={avatar}
-          className="w-[30rem] h-[30rem] object-cover transition-all duration-500 shadow-md shadow-slate-400 hover:shadow-lg hover:shadow-slate-500 max-xl:w-[16rem] max-xl:h-[16rem] max-sm:w-[10rem] max-sm:h-[10rem]"
+          className="w-[30rem] h-[30rem] object-cover rounded-full border-8 transition-all duration-500 shadow-md shadow-slate-400/20 hover:shadow-lg hover:shadow-slate-400/70 max-xl:w-[16rem] max-xl:h-[16rem] max-sm:w-[10rem] max-sm:h-[10rem]"
         />
       </div>
     </div>
