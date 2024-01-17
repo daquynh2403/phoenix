@@ -1,14 +1,22 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { SERVICE_ID, TEMPLATE_ID, PUBLIC_KEY } from "../data/constant";
 
 function RateForm() {
   const [rate, setRate] = useState(0);
   const [hoverRate, setHoverRate] = useState(0);
+  const [countDown, setCountDown] = useState(60);
   const form = useRef(null);
 
+  useEffect(() => {
+    setInterval(() => {
+      if (countDown > 0) {
+        setCountDown((prev) => prev - 1);
+      }
+    }, 1000);
+  }, [countDown]);
   const sendEmail = (event) => {
     event.preventDefault();
 
@@ -90,8 +98,9 @@ function RateForm() {
         <button
           type="submit"
           className="border border-slate-500 text-slate-700 text-base font-semibold px-3 py-1 rounded hover:text-white hover:bg-slate-700 transition-all duration-500"
+          disabled={countDown > 0}
         >
-          Send
+          {countDown > 0 ? `${countDown}s` : "Send"}
         </button>
       </div>
     </form>
