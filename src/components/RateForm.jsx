@@ -7,15 +7,18 @@ import { SERVICE_ID, TEMPLATE_ID, PUBLIC_KEY } from "../data/constant";
 function RateForm() {
   const [rate, setRate] = useState(0);
   const [hoverRate, setHoverRate] = useState(0);
-  const [countDown, setCountDown] = useState(60);
+  const [countDown, setCountDown] = useState(0);
   const form = useRef(null);
 
   useEffect(() => {
-    setInterval(() => {
-      if (countDown > 0) {
-        setCountDown((prev) => prev - 1);
-      }
-    }, 1000);
+    const countDownBtn =
+      countDown > 0 &&
+      setInterval(() => {
+        if (countDown > 0) {
+          setCountDown((prev) => prev - 1);
+        }
+      }, 1000);
+    return () => clearInterval(countDownBtn);
   }, [countDown]);
   const sendEmail = (event) => {
     event.preventDefault();
@@ -27,6 +30,7 @@ function RateForm() {
         setRate(0);
         setHoverRate(0);
         alert("Sent to Quin's gmail. Thank you!");
+        setCountDown(60);
       })
       .catch((err) => {
         console.error(err.text);
@@ -97,10 +101,10 @@ function RateForm() {
       <div className="mt-3">
         <button
           type="submit"
-          className="border border-slate-500 text-slate-700 text-base font-semibold px-3 py-1 rounded hover:text-white hover:bg-slate-700 transition-all duration-500"
+          className="border border-slate-500 text-slate-700 text-base font-semibold px-3 py-1 rounded disabled:text-slate-700/50 disabled:border-slate-500/20 disabled:shadow-md"
           disabled={countDown > 0}
         >
-          {countDown > 0 ? `${countDown}s` : "Send"}
+          {countDown > 0 ? `Able to send after: ${countDown}s` : "Send"}
         </button>
       </div>
     </form>
