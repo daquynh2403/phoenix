@@ -38,7 +38,7 @@ function App() {
       </div>
       <div
         id="education"
-        className="relative bg-[url('./assets/project-12.jpg')] bg-top"
+        className="relative bg-[url('./assets/project-10.jpg')]"
       >
         <div className="absolute h-full w-full bg-black opacity-80 z-10"></div>
         <Education />
