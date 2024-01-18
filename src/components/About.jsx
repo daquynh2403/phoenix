@@ -55,7 +55,7 @@ function About() {
                     clickItem={clickItem}
                   >
                     <button
-                      className="p-1 font-light hover:bg-slate-800 hover:text-white transition-all duration-500"
+                      className="p-1 font-extralight hover:bg-slate-800 hover:text-white transition-all duration-500"
                       onClick={() => handleClick(item.idItem, index)}
                       id={item.idItem}
                       value={item.name}
@@ -69,7 +69,7 @@ function About() {
                     <a
                       href={item.link}
                       target="_blank"
-                      className="p-1 font-light hover:bg-slate-800 hover:text-white transition-all duration-500"
+                      className="p-1 font-extralight hover:bg-slate-800 hover:text-white transition-all duration-500"
                       rel="noreferrer"
                     >
                       {item.name}
