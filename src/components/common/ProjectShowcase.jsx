@@ -1,5 +1,5 @@
 import Project from "./Project";
-import { projectData } from "../data/projectData";
+import { projectData } from "../../data/projectData";
 
 function ProjectShowcase() {
   return (

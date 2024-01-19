@@ -1,15 +1,15 @@
-import project4 from "../assets/project-4.jpg";
-import project5 from "../assets/project-5.jpg";
-import project6 from "../assets/project-6.jpg";
-import project7 from "../assets/project-7.jpg";
-import project8 from "../assets/project-8.jpg";
-import project9 from "../assets/project-9.jpg";
+import project1 from "../assets/projects/project-1.jpg";
+import project2 from "../assets/projects/project-2.jpg";
+import project3 from "../assets/projects/project-3.jpg";
+import project4 from "../assets/projects/project-4.jpg";
+import project5 from "../assets/projects/project-5.jpg";
+import project6 from "../assets/projects/project-6.jpg";
 import { faReact, faVuejs, faNodeJs } from "@fortawesome/free-brands-svg-icons";
 
 export const projectData = [
   {
     id: 1,
-    imgSrc: project4,
+    imgSrc: project1,
     title: "LUNARI MARKET",
     repo: "#!",
     live: "#!",
@@ -18,7 +18,7 @@ export const projectData = [
   },
   {
     id: 2,
-    imgSrc: project5,
+    imgSrc: project2,
     title: "SOLARI STORE",
     repo: "#!",
     live: "#!",
@@ -27,7 +27,7 @@ export const projectData = [
   },
   {
     id: 3,
-    imgSrc: project6,
+    imgSrc: project3,
     title: "EDITOR BUNDLE",
     repo: "#!",
     live: "#!",
@@ -36,7 +36,7 @@ export const projectData = [
   },
   {
     id: 4,
-    imgSrc: project7,
+    imgSrc: project4,
     title: "SOLARI STORE",
     repo: "#!",
     live: "#!",
@@ -45,7 +45,7 @@ export const projectData = [
   },
   {
     id: 5,
-    imgSrc: project8,
+    imgSrc: project5,
     title: "LUNARI MARKET",
     repo: "#!",
     live: "#!",
@@ -54,7 +54,7 @@ export const projectData = [
   },
   {
     id: 6,
-    imgSrc: project9,
+    imgSrc: project6,
     title: "SOLARI STORE",
     repo: "#!",
     live: "#!",

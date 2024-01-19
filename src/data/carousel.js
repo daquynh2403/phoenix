@@ -1,10 +1,10 @@
-import bg1 from "../assets/bg-white1.jpg";
-import bg3 from "../assets/bg-white3.jpg";
-import bg2 from "../assets/bg-white2.jpg";
+import slide1 from "../assets/slides/bg-slide-1.jpg";
+import slide2 from "../assets/slides/bg-slide-2.jpg";
+import slide3 from "../assets/slides/bg-slide-3.jpg";
 
 export const slides = [
   {
-    img: bg3,
+    img: slide1,
     heading: "Front-End",
     subheading: "Developer",
     desc: {
@@ -16,7 +16,7 @@ export const slides = [
     useIcon: true,
   },
   {
-    img: bg2,
+    img: slide2,
     heading: "WORK",
     subheading: "ANYWHERE",
     desc: {
@@ -28,7 +28,7 @@ export const slides = [
     useIcon: false,
   },
   {
-    img: bg1,
+    img: slide3,
     heading: "LEARN",
     subheading: "EVERYWHERE",
     desc: {

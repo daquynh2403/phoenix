@@ -1,5 +1,5 @@
-import project4 from "../assets/project-4.jpg";
-import RateForm from "./RateForm";
+import project1 from "../assets/projects/project-1.jpg";
+import RateForm from "./common/RateForm";
 
 function Footer() {
   return (
@@ -7,7 +7,7 @@ function Footer() {
       <div className="w-2/3 mx-auto flex mb-2 max-lg:w-full max-md:block">
         <div className="text-lg font-thin tracking-wide max-md:text-base">
           <img
-            src={project4}
+            src={project1}
             className="w-28 h-28 object-cover rounded-full object-right"
           />
           <div className="mt-8">Ho Chi Minh City, Vietnam</div>

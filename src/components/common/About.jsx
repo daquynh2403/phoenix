@@ -1,10 +1,10 @@
+import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { faCopy } from "@fortawesome/free-regular-svg-icons";
-import avatar from "../assets/avatar.jpg";
+import { techStackData, socialLinksData } from "../../data/aboutSectionData";
+import avatar from "../../assets/common/avatar.jpg";
 import Notification from "./Notification";
-import { useState } from "react";
-import { techStackData, socialLinksData } from "../data/aboutSectionData";
 
 function About() {
   const [show, setShow] = useState(false);

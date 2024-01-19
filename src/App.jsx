@@ -1,11 +1,11 @@
-import About from "./components/About";
+import About from "./components/common/About";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-import ProjectShowcase from "./components/ProjectShowcase";
+import Education from "./components/common/Education";
+import Carousel from "./components/common/Carousel";
+import ProjectShowcase from "./components/common/ProjectShowcase";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
-import Education from "./components/Education";
-import Carousel from "./components/Carousel";
 import { slides } from "./data/carousel";
 
 function App() {
@@ -38,9 +38,9 @@ function App() {
       </div>
       <div
         id="education"
-        className="relative bg-[url('./assets/project-10.jpg')]"
+        className="relative bg-[url('./assets/common/bg-edu.jpg')]"
       >
-        <div className="absolute h-full w-full bg-black opacity-80 z-10"></div>
+        <div className="absolute h-full w-full bg-black opacity-80 z-10" />
         <Education />
       </div>
       <div className="mt-4">

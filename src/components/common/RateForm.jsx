@@ -1,8 +1,8 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useRef, useState } from "react";
+import { faStar } from "@fortawesome/free-solid-svg-icons";
+import { SERVICE_ID, TEMPLATE_ID, PUBLIC_KEY } from "../../data/constant";
 import emailjs from "@emailjs/browser";
-import { SERVICE_ID, TEMPLATE_ID, PUBLIC_KEY } from "../data/constant";
 
 function RateForm() {
   const [rate, setRate] = useState(0);
