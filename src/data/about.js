@@ -12,7 +12,7 @@ import {
 import { faSquarePhoneFlip } from "@fortawesome/free-solid-svg-icons";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 
-export const techStackData = [
+export const techStack = [
   { icon: faHtml5, color: "", name: "HTML5" },
   { icon: faCss3Alt, color: "", name: "CSS3" },
   { icon: faJs, color: "", name: "Javascript" },
@@ -22,7 +22,7 @@ export const techStackData = [
   { icon: faPython, color: "", name: "Python" },
 ];
 
-export const socialLinksData = [
+export const socialLinks = [
   {
     icon: faLinkedinIn,
     color: "",

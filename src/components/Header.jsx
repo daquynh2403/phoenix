@@ -24,7 +24,7 @@ function Header() {
   };
 
   return (
-    <div className={`items-center w-full h-fit fixed z-40`}>
+    <div className="items-center w-full h-fit fixed z-40">
       <div
         className={`flex w-full justify-between ${headerStyle} items-center transition-all duration-500`}
       >

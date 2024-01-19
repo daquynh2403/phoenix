@@ -6,7 +6,7 @@ import Carousel from "./components/common/Carousel";
 import ProjectShowcase from "./components/common/ProjectShowcase";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
-import { slides } from "./data/carousel";
+import { slides } from "./data/slides";
 
 function App() {
   const handleClickAbout = () => {

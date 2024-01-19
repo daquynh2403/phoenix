@@ -2,8 +2,9 @@ import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { faCopy } from "@fortawesome/free-regular-svg-icons";
-import { techStackData, socialLinksData } from "../../data/aboutSectionData";
+import { techStack, socialLinks } from "../../data/about";
 import avatar from "../../assets/common/avatar.jpg";
+import project1 from "../../assets/projects/project-1.jpg";
 import Notification from "./Notification";
 
 function About() {
@@ -32,14 +33,13 @@ function About() {
         </div>
         <div className="mt-5 font-extralight tracking-wide">
           <div className="break-words text-xl text-slate-900 max-md:text-base">
-            I am a highly motivated and dedicated front-end developer with a
-            Bachelor Degree in Computer Science and 2 years of professional
-            experience. Known for my attention to detail, creativity, and
-            problem-solving abilities, I strive to create visually stunning and
-            user-friendly web applications.
+            I am a highly motivated and dedicated front-end developer. Known for
+            my attention to detail, creativity, and problem-solving abilities, I
+            strive to create visually stunning and user-friendly web
+            applications.
           </div>
           <div className="mt-10 grid grid-cols-2 gap-2 border-l-2 border-slate-500 pb-2 w-[50rem] max-xl:w-full max-sm:grid-cols-1 max-sm:mt-2 max-md:text-sm">
-            {socialLinksData.map((item, index) => (
+            {socialLinks.map((item, index) => (
               <div key={index} className="mt-3">
                 <FontAwesomeIcon
                   icon={item.icon}
@@ -88,7 +88,7 @@ function About() {
           Tech <span className="font-bold">stack</span>
         </div>
         <div className="grid grid-cols-4 text-center text-slate-900/70 w-[45rem] mt-4 max-xl:w-full">
-          {techStackData.map((item, index) => (
+          {techStack.map((item, index) => (
             <div
               className={`py-4 ${
                 [0, 1, 2, 3].includes(index) ? "border-b" : ""
@@ -120,8 +120,8 @@ function About() {
       </div>
       <div className="w-2/5 flex justify-center items-center max-xl:w-full max-xl:mt-10">
         <img
-          src={avatar}
-          className="w-[30rem] h-[30rem] object-cover rounded-full border-8 transition-all duration-500 shadow-md shadow-slate-400/20 hover:shadow-lg hover:shadow-slate-400/70 max-xl:w-[16rem] max-xl:h-[16rem] max-sm:w-[10rem] max-sm:h-[10rem]"
+          src={project1}
+          className="w-[30rem] h-[30rem] object-cover object-right rounded-full border-8 transition-all duration-500 shadow-md shadow-slate-400/20 hover:shadow-lg hover:shadow-slate-400/70 max-xl:w-[16rem] max-xl:h-[16rem] max-sm:w-[10rem] max-sm:h-[10rem]"
         />
       </div>
     </div>

@@ -1,5 +1,5 @@
 import Project from "./Project";
-import { projectData } from "../../data/projectData";
+import { projects } from "../../data/projects";
 
 function ProjectShowcase() {
   return (
@@ -9,7 +9,7 @@ function ProjectShowcase() {
         <span className="font-bold ml-3">showcase</span>
       </div>
       <div className="grid grid-cols-3 gap-4 max-lg:grid-cols-2 max-sm:grid-cols-1">
-        {projectData.map((project) => (
+        {projects.map((project) => (
           <Project
             key={project.id}
             imgSrc={project.imgSrc}
