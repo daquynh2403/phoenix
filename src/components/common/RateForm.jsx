@@ -51,7 +51,7 @@ function RateForm() {
         <label className="text-base font-extralight p-2">Name</label>
         <input
           placeholder="John Doe"
-          className="font-thin block w-full p-2 border-2 rounded-lg max-md:w-1/2"
+          className="font-thin block w-full p-2 border-2 rounded-lg max-md:w-1/2 max-sm:w-2/3"
           name="name"
           type="text"
         />
@@ -61,7 +61,7 @@ function RateForm() {
         <input
           placeholder="johndoe@gmail.com"
           type="email"
-          className="font-thin block w-full p-2 border-2 rounded-lg max-md:w-1/2"
+          className="font-thin block w-full p-2 border-2 rounded-lg max-md:w-1/2 max-sm:w-2/3"
           name="email"
         />
       </div>
@@ -94,7 +94,7 @@ function RateForm() {
         <label className="text-base font-extralight p-2">Message</label>
         <textarea
           placeholder="Your message"
-          className="font-thin block w-full p-2 border-2 rounded-lg max-md:w-1/2"
+          className="font-thin block w-full p-2 border-2 rounded-lg max-md:w-1/2 max-sm:w-2/3"
           name="message"
         />
       </div>

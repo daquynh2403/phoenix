@@ -9,8 +9,9 @@ import {
   faLinkedinIn,
   faPython,
 } from "@fortawesome/free-brands-svg-icons";
-import { faSquarePhoneFlip } from "@fortawesome/free-solid-svg-icons";
+import { faDownload } from "@fortawesome/free-solid-svg-icons";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
+import QuinCV from "../assets/common/QuinCV.pdf";
 
 export const techStack = [
   { icon: faHtml5, color: "", name: "HTML5" },
@@ -24,29 +25,31 @@ export const techStack = [
 
 export const socialLinks = [
   {
+    id: "linkedin",
     icon: faLinkedinIn,
     color: "",
     link: "https://www.linkedin.com/in/qu%E1%BB%B3nh-l%C3%AA-b7008324a/",
-    name: "linkedin.com/quỳnh-lê",
+    name: "LinkedIn",
   },
   {
+    id: "git",
     icon: faGithub,
     color: "",
     link: "https://github.com/daquynh2403",
-    name: "github.com/daquynh2403",
+    name: "Github",
   },
   {
+    id: "gmail",
     icon: faEnvelope,
     color: "",
-    name: "daquynh2403@gmail.com",
-    isCopy: true,
-    idItem: "gmail",
+    link: "#!",
+    name: "Copy Gmail",
   },
   {
-    icon: faSquarePhoneFlip,
+    id: "cv",
+    icon: faDownload,
     color: "",
-    name: "+84 865 781 317 (Zalo)",
-    isCopy: true,
-    idItem: "phone",
+    link: QuinCV,
+    name: "Download CV",
   },
 ];

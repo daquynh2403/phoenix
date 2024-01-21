@@ -4,7 +4,7 @@ import slide3 from "../assets/slides/bg-slide-3.jpg";
 
 export const slides = [
   {
-    img: slide1,
+    img: slide3,
     heading: "Front-End",
     subheading: "Developer",
     desc: {
@@ -28,7 +28,7 @@ export const slides = [
     useIcon: false,
   },
   {
-    img: slide3,
+    img: slide1,
     heading: "LEARN",
     subheading: "EVERYWHERE",
     desc: {

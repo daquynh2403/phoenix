@@ -1,29 +1,70 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      borderRadius: {
+        "custom-img": "60% 40% 30% 70% / 60% 30% 70% 40%",
+      },
       keyframes: {
-        showUp: {
-          '0%, 50%': { opacity: '0'},
-          '50%': { opacity: '0.5'},
-          '100%': { opacity: '1'},
-
-        } 
+        morph: {
+          "0%": {
+            borderRadius: "60% 40% 30% 70% / 60% 30% 70% 40%",
+          },
+          "50%": {
+            borderRadius: "30% 60% 70% 40% / 50% 60% 30% 60%",
+          },
+          "100%": {
+            borderRadius: "60% 40% 30% 70% / 60% 30% 70% 40%",
+          },
+        },
+        slideUp: {
+          "0%": {
+            transform: "translateY(100px)",
+            opacity: "0",
+          },
+          "50%": {
+            opacity: "0",
+          },
+          "100%": {
+            transform: "translateY(0px)",
+            opacity: "1",
+          },
+        },
+        fadeLeftIn: {
+          "0%": {
+            transform: "translateX(-100px)",
+            opacity: "0",
+          },
+          "100%": {
+            transform: "translateX(0px)",
+            opacity: "1",
+          },
+        },
+        fadeRightIn: {
+          "0%": {
+            transform: "translateX(100px)",
+            opacity: "0",
+          },
+          "100%": {
+            transform: "translateX(0px)",
+            opacity: "1",
+          },
+        },
       },
       animation: {
-        showUp: 'showUp 3s ease-in-out 1'
-      }
+        morph: "morph 5s ease-in-out infinite",
+      },
+      supports: {
+        "no-scroll-driven-animations": "not(animation-timeline: scroll())",
+      },
     },
     variants: {
       extend: {
-        translate: ['group-hover', 'hover'],
-        zIndex: ['group-hover', 'hover'],
+        translate: ["group-hover", "hover"],
+        zIndex: ["group-hover", "hover"],
       },
-    }
+    },
   },
   plugins: [],
-}
+};

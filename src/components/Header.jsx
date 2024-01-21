@@ -62,7 +62,7 @@ function Header() {
       </div>
       <div
         className={`w-full ${
-          openNav ? "opacity-100 z-50" : "opacity-0 hidden"
+          openNav ? "opacity-100 z-50 visible" : "opacity-0 invisible"
         } transition-all duration-500`}
       >
         <ul className="font-normal tracking-wider leading-4 bg-slate-900/50 text-slate-50 text-2xl max-md:text-lg">
