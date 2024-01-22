@@ -10,19 +10,19 @@ function About() {
   const [descRef, desVisible] = useElementOnScreen({
     root: null,
     rootMargin: "0px",
-    threshold: 0.4,
+    threshold: 0.5,
   });
 
   const [techRef, techVisible] = useElementOnScreen({
     root: null,
     rootMargin: "0px",
-    threshold: 0.4,
+    threshold: 0.2,
   });
 
   const [imgRef, imgVisible] = useElementOnScreen({
     root: null,
     rootMargin: "0px",
-    threshold: 0.4,
+    threshold: 0.2,
   });
 
   const handleClick = (id) => {
@@ -49,7 +49,7 @@ function About() {
             desVisible
               ? "animate-[fadeLeftIn_1s_ease-in-out] visible"
               : "invisible"
-          } mt-5 font-extralight tracking-wide`}
+          }  mt-5 font-extralight tracking-wide`}
         >
           <div className="break-words text-xl text-slate-900 max-md:text-base">
             I am a highly motivated and dedicated front-end developer. Known for
@@ -97,7 +97,7 @@ function About() {
           ref={techRef}
           className={`${
             techVisible
-              ? "animate-[fadeLeftIn_1s_ease-in-out] visible"
+              ? "animate-[fadeLeftIn_2s_ease-in-out] visible"
               : "invisible"
           } grid grid-cols-4 text-center text-slate-900/70 w-[45rem] mt-4 max-xl:w-full`}
         >
@@ -135,7 +135,7 @@ function About() {
         ref={imgRef}
         className={`${
           imgVisible
-            ? "animate-[fadeRightIn_1s_ease-in-out] visible"
+            ? "animate-[fadeRightIn_3s_ease-in-out] visible"
             : "invisible"
         } w-2/5 flex justify-center items-center max-xl:w-full max-xl:mt-10`}
       >

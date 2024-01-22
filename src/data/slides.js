@@ -17,20 +17,20 @@ export const slides = [
   },
   {
     img: slide2,
-    heading: "WORK",
-    subheading: "ANYWHERE",
+    heading: "CODE",
+    subheading: "CRAFTER",
     desc: {
-      partOne: "My ",
-      partTwo: "passion ",
-      partThree: "guide me",
-      partFour: "",
+      partOne: "I ",
+      partTwo: "speak ",
+      partThree: "the language of ",
+      partFour: "Innovation",
     },
     useIcon: false,
   },
   {
     img: slide1,
-    heading: "LEARN",
-    subheading: "EVERYWHERE",
+    heading: "SOLVE",
+    subheading: "SIMPLIFIED",
     desc: {
       partOne: "",
       partTwo: "",

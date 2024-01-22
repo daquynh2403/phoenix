@@ -41,6 +41,16 @@ export default {
             opacity: "1",
           },
         },
+        fadeLeftOut: {
+          "0%": {
+            transform: "translateX(0px)",
+            opacity: "1",
+          },
+          "100%": {
+            transform: "translateX(-100px)",
+            opacity: "0",
+          },
+        },
         fadeRightIn: {
           "0%": {
             transform: "translateX(100px)",
