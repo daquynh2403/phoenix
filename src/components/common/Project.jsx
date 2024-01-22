@@ -9,14 +9,14 @@ function Project({ imgSrc, title, repo, live, desc, techstack }) {
       <div className="absolute bg-slate-800/60 w-1/2 h-full -translate-x-full group-hover:translate-x-0 z-30 transition-all duration-700 ease-in-out max-2xl:w-full">
         <div className="p-4 max-md:text-base">
           <div className="text-xl text-white font-bold">{title}</div>
-          <div className="flex text-lg text-white font-thin my-4 ">
+          <div className="flex text-lg items-center text-white font-thin my-4 ">
             <div className="flex items-center">
               <FontAwesomeIcon icon={faGithub} className="mr-2" />
               <a className="mr-10 cursor-pointer" href={repo}>
                 Repository
               </a>
             </div>
-            <div className="flex items-center mt-2">
+            <div className="flex items-center max-md:mt-2">
               <FontAwesomeIcon
                 icon={faArrowUpRightFromSquare}
                 className="mr-2"
