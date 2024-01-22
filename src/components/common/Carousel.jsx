@@ -15,10 +15,12 @@ function Carousel({ slides }) {
   const prevSlide = () => {
     if (current === 0) setCurrent(slides.length - 1);
     else setCurrent(current - 1);
+    resetTimeout();
   };
   const nextSlide = () => {
     if (current === slides.length - 1) setCurrent(0);
     else setCurrent(current + 1);
+    resetTimeout();
   };
   const resetTimeout = () => {
     if (timeoutRef.current) {
