@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
 import { techStack, socialLinks } from "../../data/about";
@@ -7,22 +7,11 @@ import { useElementOnScreen } from "../../hooks/useElementOnScreen";
 
 function About() {
   const [show, setShow] = useState(false);
+  const parRef = useRef(null);
   const [descRef, desVisible] = useElementOnScreen({
-    root: null,
+    root: parRef?.current,
     rootMargin: "0px",
     threshold: 0.5,
-  });
-
-  const [techRef, techVisible] = useElementOnScreen({
-    root: null,
-    rootMargin: "0px",
-    threshold: 0.2,
-  });
-
-  const [imgRef, imgVisible] = useElementOnScreen({
-    root: null,
-    rootMargin: "0px",
-    threshold: 0.2,
   });
 
   const handleClick = (id) => {
@@ -38,7 +27,7 @@ function About() {
       .catch((error) => console.error(error));
   };
   return (
-    <div className="flex overflow-clip max-xl:block">
+    <div ref={parRef} className="flex overflow-clip max-xl:block">
       <div className="w-1/2 mx-auto max-xl:w-full max-xl:text-center">
         <div className="text-5xl font-extralight text-slate-700 tracking-wide border-l-4 border-slate-200 px-3 pb-3 max-md:text-4xl max-md:border-0 max-md:p-0">
           About <span className="font-bold">me</span>
@@ -94,9 +83,8 @@ function About() {
           Tech <span className="font-bold">stack</span>
         </div>
         <div
-          ref={techRef}
           className={`${
-            techVisible
+            desVisible
               ? "animate-[fadeLeftIn_2s_ease-in-out] visible"
               : "invisible"
           } grid grid-cols-4 text-center text-slate-900/70 w-[45rem] mt-4 max-xl:w-full`}
@@ -132,9 +120,8 @@ function About() {
         </div>
       </div>
       <div
-        ref={imgRef}
         className={`${
-          imgVisible
+          desVisible
             ? "animate-[fadeRightIn_3s_ease-in-out] visible"
             : "invisible"
         } w-2/5 flex justify-center items-center max-xl:w-full max-xl:mt-10`}
