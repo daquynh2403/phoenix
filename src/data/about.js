@@ -35,7 +35,7 @@ export const socialLinks = [
     id: "git",
     icon: faGithub,
     color: "",
-    link: "https://github.com/daquynh2403",
+    link: "https://github.com/daquynh2403/phoenix",
     name: "Github",
   },
   {
