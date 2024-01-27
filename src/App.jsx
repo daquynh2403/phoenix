@@ -30,7 +30,7 @@ function App() {
           />
         </button>
       </div>
-      <div id="about" className="py-14 border-b border-slate-200 max-lg:py-4">
+      <div id="about" className="p-14 border-b border-slate-200 max-lg:py-4">
         <About />
       </div>
       <div id="portfolio" className="py-4">

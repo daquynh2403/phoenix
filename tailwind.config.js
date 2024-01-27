@@ -61,6 +61,16 @@ export default {
             opacity: "1",
           },
         },
+        slideDown: {
+          "0%": {
+            transform: "translateY(-50px)",
+            opacity: "0",
+          },
+          "100%": {
+            transform: "translateY(0px)",
+            opacity: "1",
+          },
+        },
       },
       animation: {
         morph: "morph 5s ease-in-out infinite",

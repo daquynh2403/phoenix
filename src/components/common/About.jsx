@@ -16,6 +16,12 @@ function About() {
     threshold: 0.5,
   });
 
+  const [logoRef, logoVisible] = useElementOnScreen({
+    root: null,
+    rootMargin: "10px",
+    threshold: 0.1,
+  });
+
   const handleClick = (id) => {
     if (id != "gmail") return;
     const copyAction = navigator.clipboard.writeText("daquynh2403@gmail.com");
@@ -52,7 +58,7 @@ function About() {
             strive to create visually stunning and user-friendly web
             applications.
           </div>
-          <div className="mt-10 flex gap-4 pb-2 max-xl:w-full max-xl:justify-center max-md:text-sm max-sm:grid max-sm:grid-cols-2 max-sm:mt-2">
+          <div className="mt-6 flex gap-4 pb-2 max-xl:w-full max-xl:justify-center max-md:text-sm max-sm:grid max-sm:grid-cols-2 max-sm:mt-2">
             {socialLinks.map((item, index) => (
               <div className="relative" key={index}>
                 <div className="border px-4 py-1 rounded-full hover:shadow-lg hover:shadow-slate-300 transition-all duration-300">
@@ -95,11 +101,15 @@ function About() {
               : "invisible"
           } w-[45rem] mt-4 max-xl:w-full`}
         >
-          <div className="mt-10 flex gap-4 pb-2 max-xl:w-full max-xl:justify-center max-md:text-sm max-sm:grid max-sm:grid-cols-2 max-sm:mt-2">
+          <div className="my-6 flex gap-4 pb-2 max-xl:w-full max-xl:justify-center max-md:text-sm max-sm:grid max-sm:grid-cols-2 max-sm:mt-2">
             {techStackCategory.map((item, index) => (
               <button
                 key={index}
-                className="border px-4 py-1 rounded-full font-extralight tracking-wide text-slate-900 hover:shadow-lg focus:bg-slate-800 focus:text-slate-50 hover:shadow-slate-300 transition-all duration-300"
+                className={`border px-4 py-1 rounded-full font-extralight tracking-wide hover:shadow-lg ${
+                  category === item.type
+                    ? "bg-slate-700 text-slate-50"
+                    : "bg-white text-slate-700"
+                }  hover:shadow-slate-300 transition-all duration-300`}
                 onClick={() => setCategory(item.type)}
               >
                 <FontAwesomeIcon icon={item.icon} className="mr-2" />
@@ -107,11 +117,23 @@ function About() {
               </button>
             ))}
           </div>
-          <div className="flex gap-10 *:border">
+          <div className="w-full flex justify-center gap-4 max-2xl:grid max-2xl:grid-cols-4 max-2xl:w-3/4 max-xl:w-full max-xl:flex  max-md:grid max-md:grid-cols-4 max-md:w-3/4 max-md:mx-auto max-sm:w-full">
             {filterTechStack.map((item) => (
-              <div className="py-4 border-slate-200" key={item.id}>
-                <img src={item.id} alt={item.name} className="w-20 h-28" />
-                <div className="">{item.name}</div>
+              <div
+                key={item.id}
+                ref={logoRef}
+                className={`${
+                  logoVisible ? "animate-[slideDown_1s]" : "-translate-y-[50px]"
+                } p-4 max-2xl:p-2`}
+              >
+                <img
+                  src={item.id}
+                  alt={item.name}
+                  className="h-10 w-full mx-auto"
+                />
+                <div className="text-center font-normal text-slate-500 mt-2 max-sm:text-sm">
+                  {item.name}
+                </div>
               </div>
             ))}
           </div>
