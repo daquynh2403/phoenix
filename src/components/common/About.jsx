@@ -1,12 +1,14 @@
-import { useRef, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
-import { techStack, socialLinks } from "../../data/about";
+import { techStack, socialLinks, techStackCategory } from "../../data/about";
 import project1 from "../../assets/projects/project-1.jpg";
 import { useElementOnScreen } from "../../hooks/useElementOnScreen";
 
 function About() {
   const [show, setShow] = useState(false);
+  const [category, setCategory] = useState("frontend");
+
   const parRef = useRef(null);
   const [descRef, desVisible] = useElementOnScreen({
     root: parRef?.current,
@@ -26,6 +28,10 @@ function About() {
       })
       .catch((error) => console.error(error));
   };
+  const filterTechStack = useMemo(() => {
+    return techStack.filter((item) => item.type === category);
+  }, [category]);
+
   return (
     <div ref={parRef} className="flex overflow-clip max-xl:block">
       <div className="w-1/2 mx-auto max-xl:w-full max-xl:text-center">
@@ -46,7 +52,7 @@ function About() {
             strive to create visually stunning and user-friendly web
             applications.
           </div>
-          <div className="mt-10 flex gap-4 pb-2 max-xl:w-full max-xl:justify-center max-md:text-sm max-sm:grid max-sm:grid-cols-2 max-sm:mt-2 ">
+          <div className="mt-10 flex gap-4 pb-2 max-xl:w-full max-xl:justify-center max-md:text-sm max-sm:grid max-sm:grid-cols-2 max-sm:mt-2">
             {socialLinks.map((item, index) => (
               <div className="relative" key={index}>
                 <div className="border px-4 py-1 rounded-full hover:shadow-lg hover:shadow-slate-300 transition-all duration-300">
@@ -87,35 +93,27 @@ function About() {
             desVisible
               ? "animate-[fadeLeftIn_2s_ease-in-out] visible"
               : "invisible"
-          } grid grid-cols-4 text-center text-slate-900/70 w-[45rem] mt-4 max-xl:w-full`}
+          } w-[45rem] mt-4 max-xl:w-full`}
         >
-          {techStack.map((item, index) => (
-            <div
-              className={`py-4 ${
-                [0, 1, 2, 3].includes(index) ? "border-b" : ""
-              } ${index != 3 ? "border-r" : ""} border-slate-200`}
-              key={index}
-            >
-              <FontAwesomeIcon
-                icon={item.icon}
-                style={{ color: item.color }}
-                size="2xl"
-                className="h-20 max-md:h-10"
-              />
-              <div className="text-center font-normal">{item.name}</div>
-            </div>
-          ))}
-          <div className="h-full w-full=">
-            <svg
-              width="90px"
-              height="90px"
-              viewBox="0 0 32 32"
-              xmlns="http://www.w3.org/2000/svg"
-              className="w-full mx-auto mb-1 fill-slate-900/70 max-md:h-10 max-md:mt-4"
-            >
-              <path d="M9,13.7q1.4-5.6,7-5.6c5.6,0,6.3,4.2,9.1,4.9q2.8.7,4.9-2.1-1.4,5.6-7,5.6c-5.6,0-6.3-4.2-9.1-4.9Q11.1,10.9,9,13.7ZM2,22.1q1.4-5.6,7-5.6c5.6,0,6.3,4.2,9.1,4.9q2.8.7,4.9-2.1-1.4,5.6-7,5.6c-5.6,0-6.3-4.2-9.1-4.9Q4.1,19.3,2,22.1Z"></path>
-            </svg>
-            <div className="text-center font-normal">TailwindCSS</div>
+          <div className="mt-10 flex gap-4 pb-2 max-xl:w-full max-xl:justify-center max-md:text-sm max-sm:grid max-sm:grid-cols-2 max-sm:mt-2">
+            {techStackCategory.map((item, index) => (
+              <button
+                key={index}
+                className="border px-4 py-1 rounded-full font-extralight tracking-wide text-slate-900 hover:shadow-lg focus:bg-slate-800 focus:text-slate-50 hover:shadow-slate-300 transition-all duration-300"
+                onClick={() => setCategory(item.type)}
+              >
+                <FontAwesomeIcon icon={item.icon} className="mr-2" />
+                {item.name}
+              </button>
+            ))}
+          </div>
+          <div className="flex gap-10 *:border">
+            {filterTechStack.map((item) => (
+              <div className="py-4 border-slate-200" key={item.id}>
+                <img src={item.id} alt={item.name} className="w-20 h-28" />
+                <div className="">{item.name}</div>
+              </div>
+            ))}
           </div>
         </div>
       </div>

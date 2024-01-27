@@ -42,7 +42,7 @@ function Introduce({ id, current, slide, options }) {
         <div
           className={`${
             headingVisible ? "animate-[slideUp_4s_ease-in-out_1] visible" : ""
-          } text-xl font-extralight text-slate-500 mt-4 leading-10 w-[60rem] max-xl:w-[30rem] max-lg:text-center max-lg:w-full max-sm:text-base 2xl:w-[50rem]`}
+          } text-xl font-extralight text-slate-500 mt-4 leading-10 max-xl:w-[30rem] max-lg:text-center max-lg:w-full max-sm:text-base max-2xl:w-[50rem]`}
         >
           <span>
             {slide.desc.partOne}
