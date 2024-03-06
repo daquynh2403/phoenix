@@ -5,7 +5,7 @@ import { array, string } from "prop-types";
 
 function Project({ imgSrc, title, repo, live, desc, techstack }) {
   return (
-    <div className="w-full flex h-96 relative tracking-wider leading-7 overflow-hidden group max-md:h-72 ">
+    <div className="w-full rounded-lg flex h-96 relative tracking-wider leading-7 overflow-hidden group max-md:h-72 ">
       <div className="absolute bg-slate-800/60 w-1/2 h-full -translate-x-full group-hover:translate-x-0 z-30 transition-all duration-700 ease-in-out max-2xl:w-full">
         <div className="p-4 max-md:text-base">
           <div className="text-xl text-white font-bold">{title}</div>

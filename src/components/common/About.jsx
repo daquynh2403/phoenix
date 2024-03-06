@@ -41,7 +41,7 @@ function About() {
   return (
     <div ref={parRef} className="flex overflow-clip max-xl:block">
       <div className="w-1/2 mx-auto max-xl:w-full max-xl:text-center">
-        <div className="text-5xl font-extralight text-slate-700 tracking-wide border-l-4 border-slate-200 px-3 pb-3 max-md:text-4xl max-md:border-0 max-md:p-0">
+        <div className="mb-14 text-5xl font-extralight text-slate-700 tracking-wide border-l-4 border-slate-200 px-3 pb-3 max-md:text-4xl max-md:border-0 max-md:p-0">
           About <span className="font-bold">me</span>
         </div>
         <div
@@ -91,7 +91,7 @@ function About() {
             ))}
           </div>
         </div>
-        <div className="text-2xl font-extralight text-slate-700 tracking-wide border-l-2 border-slate-500 p-2 mt-10 max-xl:mt-4">
+        <div className="mb-10 text-2xl font-extralight text-slate-700 tracking-wide border-l-2 border-slate-500 p-2 mt-10 max-xl:mt-4">
           Tech <span className="font-bold">stack</span>
         </div>
         <div
@@ -99,7 +99,7 @@ function About() {
             desVisible
               ? "animate-[fadeLeftIn_2s_ease-in-out] visible"
               : "invisible"
-          } w-[45rem] mt-4 max-xl:w-full`}
+          } w-[45rem] max-xl:w-full`}
         >
           <div className="my-6 flex gap-4 pb-2 max-xl:w-full max-xl:justify-center max-md:text-sm max-sm:grid max-sm:grid-cols-2 max-sm:mt-2">
             {techStackCategory.map((item, index) => (
@@ -117,7 +117,7 @@ function About() {
               </button>
             ))}
           </div>
-          <div className="w-full flex justify-center gap-4 max-2xl:grid max-2xl:grid-cols-4 max-2xl:w-3/4 max-xl:w-full max-xl:flex  max-md:grid max-md:grid-cols-4 max-md:w-3/4 max-md:mx-auto max-sm:w-full">
+          <div className="w-full flex justify-center gap-2 max-2xl:grid max-2xl:grid-cols-4 max-2xl:w-3/4 max-xl:w-full max-xl:flex  max-md:grid max-md:grid-cols-4 max-md:w-3/4 max-md:mx-auto max-sm:w-full">
             {filterTechStack.map((item) => (
               <div
                 key={item.id}

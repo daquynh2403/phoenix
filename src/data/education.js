@@ -19,8 +19,8 @@ export const education = [
         id: 3,
         icon: faComments,
         title: "LANGUAGE",
-        textOne: "English (IELTS 6.5)",
-        textTwo: "Chinese (HSK5)",
+        textOne: "English (IELTS 7)",
+        textTwo: "Chinese (HSK 5)",
     },
     {
         id: 4,
