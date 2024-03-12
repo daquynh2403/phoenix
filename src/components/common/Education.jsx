@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { education } from "../../data/education";
 import { useRef } from "react";
 import { useElementOnScreen } from "../../hooks/useElementOnScreen";
-import imgEdu from "../../assets/common/img-edu.jpg";
+// import imgEdu from "../../assets/common/img-edu.jpg";
 
 function Education() {
   const parRef = useRef(null);
@@ -48,13 +48,13 @@ function Education() {
               {edu.title}
               <div className="font-thin mt-4">{edu.textOne}</div>
               <div className="font-thin mt-4">{edu.textTwo}</div>
-              <div className="flex gap-6 mt-4">
+              {/* <div className="flex gap-6 mt-4">
                 <img
                   src={imgEdu}
                   alt="Image education"
                   className="w-40 rounded-xl hover:shadow-slate-50 hover:scale-125 duration-500 max-sm:m-auto"
                 />
-              </div>
+              </div> */}
             </div>
           </div>
         ))}

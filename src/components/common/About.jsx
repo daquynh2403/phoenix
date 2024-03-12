@@ -17,7 +17,7 @@ function About() {
   });
 
   const [logoRef, logoVisible] = useElementOnScreen({
-    root: null,
+    root: parRef?.current,
     rootMargin: "10px",
     threshold: 0.1,
   });
